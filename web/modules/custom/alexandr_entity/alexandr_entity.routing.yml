@@ -1,0 +1,14 @@
+alexandr.entity:
+  path: 'alexandr/guest-book'
+  defaults:
+    _controller: '\Drupal\alexandr_entity\Controller\AlexandrEntityController::report'
+    _group: 'alexandr'
+  requirements:
+    _permission: 'access content'
+
+alexandr.admin-entity:
+  path: 'admin/structure/guest-book'
+  defaults:
+    _entity_list: 'guestbook'
+  requirements:
+    _permission: 'administer nodes'

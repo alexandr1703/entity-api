@@ -1,0 +1,9 @@
+entity.guest-book_menu:
+  title: 'Guest-book'
+  route_name: alexandr.entity
+  menu_name: main
+
+entity.guests-book_admin:
+  title: 'Guest-book'
+  route_name: alexandr.admin-entity
+  parent: system.admin_structure

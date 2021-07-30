@@ -1,0 +1,45 @@
+{{ attach_library('alexandr_entity/alexandr_entity-style') }}
+{{ attach_library('alexandr_entity/alexandr_entity-js') }}
+<div class="wraper-guest-form">
+  <div class="guest-form">
+    {{ form }}
+  </div>
+</div>
+{% for item in items %}
+<div class="table-guest">
+  <div class="row row-user">
+    <div class="row row-user-name col-md-3">
+      <div class="col-md-3 ">
+        {% if item.avatar %}
+          <div class="image-avatar" onclick ='clickImage(this)'><img alt="avatar" src="{{ item.avatar }}"></div>
+        {% else %}
+          <div class="image-avatar"><img alt="avatar" src="/modules/custom/alexandr_entity/img/default-avatar.png"></div>
+        {% endif %}
+      </div>
+      <div class="user-field">
+        <p class="user-name">{{ item.name }}</p>
+        <p class="user-submitted"><span> {{ 'Submitted : '|trans }}</span>{{ item.created }}</p>
+      </div>
+    </div>
+    <div class="row row-comment col-md-9">
+      <div class="comment"><p>{{ item.comment }}</p></div>
+      {% if item.image %}
+        <div class="image-comment"><img src="{{ item.image }}" alt="image_for_comment"></div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="row row-contact">
+    <div class="user-contact">
+      <p class="user-email"><span>{{ 'Email: '|trans }}</span>{{ item.email }}</p>
+      <p class="user-phone"><span>{{ 'Phone: +380 '|trans }}</span>{{ item.phone }}</p>
+    </div>
+    <div class="buttons-guest">
+      {% if user.hasPermission('administer nodes') %}
+        <a href="/admin/content/guestbook/manage/{{ item.id }}" class="button-guest use-ajax" data-dialog-type="modal">{{ 'Edit' |trans }}</a>
+        <a href="/admin/content/guestbook/manage/{{ item.id }}/delete" class="button-guest use-ajax" data-dialog-type="modal">{{ 'Delete'|trans }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+

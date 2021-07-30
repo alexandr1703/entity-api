@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Variable insertion into twig themes.
+ */
+
+/**
+ * Connection twig template to module.
+ */
+function alexandr_entity_theme() {
+  return [
+    'Entity_template' => [
+      'variables' => ['form' => [], 'items' => []],
+      'template' => 'Entity_template',
+    ],
+  ];
+}

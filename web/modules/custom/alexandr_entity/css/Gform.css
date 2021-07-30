@@ -1,0 +1,78 @@
+.wraper-guest-form{
+  background: #ddd55c;
+  padding-bottom: 15px;
+}
+.guestbook-add-form{
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.guestbook-add-form input{
+  height: 45px;
+  border-radius: 10px;
+  width: 100%;
+  border: 2px solid #6c6713;
+}
+.guestbook-add-form textarea{
+  border-radius: 10px;
+  border: 2px solid #6c6713;
+}
+.guestbook-add-form input[value^="Remove"]{
+  width: 100px;
+  background: red;
+  color: #f7e235;
+  font-weight: bold;
+  font-size: 15px;
+}
+.guestbook-add-form .form-item label{
+  color: #6c6713;
+  font-size: 20px !important;
+}
+.guestbook-add-form #edit-submit{
+  margin: 0 auto;
+  display: block;
+  background: linear-gradient(90deg, rgba(231,211,55,1) 31%, rgba(80,79,62,1) 100%, rgba(255,42,0,1) 100%);
+  transition: 0.5s;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 50%;
+  border: none;
+}
+.my-message{
+  background: #6c6713;
+  color:#f7e235;
+  font-size: 15px;
+  padding: 10px;
+}
+.my-message-error{
+  background: red;
+  color:#f7e235;
+  font-size: 15px;
+  padding: 10px;
+}
+@media (max-width: 690px) {
+  .guestbook-add-form{
+    width: 70%;
+  }
+  .guestbook-add-form .form-item label{
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 490px){
+  .guestbook-add-form{
+    width: 80%;
+  }
+  .guestbook-add-form .form-item label{
+    font-size: 15px !important;
+  }
+  .guestbook-add-form #edit-submit{
+    font-size: 10px;
+    width: 40%;
+  }
+  .guestbook-add-form input{
+    height: 30px;
+  }
+}

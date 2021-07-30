@@ -1,0 +1,11 @@
+alexandr_entity-style:
+  css:
+    theme:
+      css/Gtable.css: {}
+      css/Gform.css: {}
+
+alexandr_entity-js:
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
